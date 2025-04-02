@@ -256,7 +256,7 @@ img.overclock {
 }
 section{
     background-color: rgb(24, 24, 24);
-    width: 90%;
+    width: 70%;
     min-height: 300px;
     margin-top: 40px;
     border-radius: 15px;
@@ -265,6 +265,7 @@ section{
 }
 .text-article{
     font-family: TekturNarrow-Bold;
+    font-size: 20px;
     color: white;
     text-align: center;
     margin-top: 20px;
@@ -279,7 +280,7 @@ h4{
     margin: 0; /* Supprime les marges par défaut */
 }
 button{
-    width: 7%;
+    width: 15%;
     height: 30px;
     position: absolute; /* Permet de le positionner par rapport au parent */
     bottom: 10px; /* Distance du bas de la section */

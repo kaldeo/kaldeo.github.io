@@ -3,176 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Développement Web</title>
+    <title>Portfolio FREVAL Gabin</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 <body>
+
     <header>
-        <div class="logo">FRÉVAL Gabin</div>
-        <nav>
-            <ul>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#parcours">Parcours</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#stages">Stages</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <img src="img/haut-gauche.jpg" alt="" class="font">
+        <ul>
+            <img src="img/fleche-gauche.png" alt="">
+            <li onclick="changeContent('accueil')">accueil</li>
+            <li onclick="changeContent('stages')">stages</li>
+            <li onclick="changeContent('bts')">BTS</li>
+            <li onclick="changeContent('projets')">projets</li>
+            <li onclick="changeContent('veille')">veille</li>
+            <li onclick="changeContent('Apropos')">à propos</li>
+            <img src="img/fleche-droit.png" alt="">
+        </ul>
+        <img src="img/haut-droit.jpg" alt="" class="font" id="font2">
     </header>
+
     <main>
-        <section class="hero">
-            <h1>Bienvenue sur mon portfolio</h1>
-            <p>Développeur passionné, découvrez mes compétences, projets et mon parcours.</p>
-        </section>
 
-        <section id="cv" class="section">
-            <h2>Mon CV</h2>
-            <div class="contain">
-                <div class="cv">
-                    <img src="cv/cv.jpg" alt="">                
+
+
+
+        <div id="accueil" class="content-section active">
+
+            <h1>Bienvenu sur mon Portfolio</h1>
+            <h1>FREVAL Gabin</h1>
+            <p>Je vous souhaite la bienvenu sur mon porfolio, vous pourez y retrouver des informations sur mon parcours scolaire et professionnel</p>
+        </div>
+    
+        <div id="stages" class="content-section">
+            <div class="box">
+                <section>
+                    <div class="box-img">
+                        <img src="img/logo-renault.jpg" alt="">
+                    </div>
+                    <div class="box-reste-droit">
+                        <p>Du 06/01/25 au 14/02/25</p>
+                        <h4>Usine Renault Sandouville</h4>
+                        <a href="pdf/RapportdestageRenault2.pdf" class="btn-rapport" target="_blank">
+                            <p>Télécharger Rapport</p>
+                        </a>
+                    </div>
+                </section>
+                <section>
+                    <div class="box-img">
+                        <img src="img/logo-renault.jpg" alt="">
+                    </div>
+                    <div class="box-reste-droit">
+                        <p>Du 13/05/24 au 07/06/24</p>
+                        <h4>Usine Renault Sandouville</h4>
+                        <a href="pdf/Rapport-de-stage-Renault.pdf" class="btn-rapport" target="_blank">
+                            <p>Télécharger Rapport</p>
+                        </a>
+                    </div>
+                </section>
+                <section>
+                    <div class="box-img">
+                        <img src="img/Logo-Caux-seine-agglo.png" alt="">
+                    </div>
+                    <div class="box-reste-droit">
+                        <p>Décembre 2022 - janvier 2023</p>
+                        <h4>Service Informatique Caux Seine Agglo</h4>
+                        <a href="pdf/rapportdestageCSA.pdf" class="btn-rapport" target="_blank">
+                            <p>Télécharger Rapport</p>
+                        </a>
+                    </div>
+                </section>
+                <section>
+                    <div class="box-img">
+                        <img src="img/digital.jpg" alt="">
+                    </div>
+                    <div class="box-reste-droit">
+                        <p>2021 - 2022 (2 mois)</p>
+                        <h4>Nicolas et Fils</h4>
+                        <a href="pdf/rapportdestageNEF.pdf" class="btn-rapport" target="_blank">
+                            <p>Télécharger Rapport</p>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    
+        <div id="bts" class="content-section">
+            <div class="image-container">
+                <div class="blur-wrapper">
+                    <img src="img/font.jpg" alt="" class="blur-image">
                 </div>
-                <div class="bouton-cv">
-                    <p>Vous pouvez télécharger mon CV en cliquant sur le lien ci-dessous :</p>
-                    <a href="cv/cv.pdf" download class="download-btn">Télécharger en PDF</a>
-                    <br>
-                    <a href="cv/cv.jpg" download class="download-btn">Télécharger en JPG</a>
+                <div class="overlay-content">
+
+                    <div class="contain-bts">
+                        <h1>Tableau de Sythèse</h1>
+                        <img src="img/tabl-syt.png" alt="" class="tableau-synt">
+                        <a href="pdf/synthe_se.xlsx" class="btn-rapport" target="_blank" id="initial">
+                            <p>Télécharger le tableau</p>
+                        </a>
+                    </div>
+
+                    <div class="contain-bts">
+                        <h1>CALENDRIER DES EPREUVES ECRITES</h1>
+                        <img src="img/plan.png" alt="" class="plan">
+                        <a href="pdf/calendrier.pdf" class="btn-rapport" target="_blank" id="initial">
+                            <p>Télécharger le calendrier</p>
+                        </a>
+                    </div>
 
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="parcours" class="section">
-            <h2>Mon parcours</h2>
-            <p>Passionné par le web, j'ai commencé mes études en informatique en réalisant un Bac professionnel Système Numérique Option RISC au lycée Jules Siegfried au Havre. J'ai choisi cette formation, car je l'ai trouvé professionnalisante, durant chaque année, je devais réaliser un stage en entreprise.</p>
-            <p>Après l'obtention de ce diplôme, j'ai commencé un BTS SIO Option SLAM (développement) au lycée St Jo Sup le Havre, je suis actuellement à ma deuxième année.</p>
-            <p>J'ai approfondi mes compétences à travers divers projets académiques et professionnels.</p>
-        </section>
 
-        <section id="experience" class="section">
-            <h2>Expériences acquises</h2>
-            <div class="contain">
-                <div class="box-exp-logo">
-                    <img src="img/mysql.png" alt="">
-                    <img src="img/nodejs.png" alt="">
-                    <img src="img/postgres.png" alt="">
-                    <img src="img/vscode.png" alt="">
-                    <img src="img/wamp.png" alt="">
-                </div>
-                <div class="box-exp">
-                    <p>Durant mes études et mes stages, j'ai acquis de solides compétences dans l'utilisation de divers outils et technologies essentiels au développement web et au développement logiciel. Ces expériences m'ont permis de maîtriser :</p>
-                    <ul>
-                        <li><strong>MySQL</strong> pour la gestion et la manipulation de bases de données relationnelles complexes, garantissant des solutions performantes et sécurisées.</li>
-                        <li><strong>Node.js</strong> pour la création d'applications back-end robustes, avec une attention particulière aux performances et à l'extensibilité.</li>
-                        <li><strong>PostgreSQL</strong>, une base de données avancée, pour les projets nécessitant une gestion efficace et des fonctionnalités avancées.</li>
-                        <li><strong>Visual Studio Code</strong>, mon environnement de développement intégré (IDE) de prédilection, optimisé pour une productivité maximale grâce aux extensions personnalisées.</li>
-                        <li><strong>WAMP</strong> pour le développement et le test de sites web en local, assurant une transition fluide vers les environnements de production."</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="stages" class="section-stage">
-            <h2>Mes stages</h2>
-            <div class="contain-stage">
-                <div class="box-stage">
-                    <h1>Usine Renault Sandouville</h1>
-                    <p>Durant ce stage, j'ai réalisé une mission consistant à créer une page permettant de naviguer entre différents tableaux de bord via des boutons et des filtres. Pour ce projet, j'ai utilisé différents langages comme HTML, CSS, JavaScript, PUG ainsi que la bibliothèque Ajax pour le JavaScript.</p>
-                    <a href="rapportdestage/Rapport-de-stage-Renault.pdf" target="_blank"><button>Télécharger le rapport</button></a>
-                </div>
-                <div class="box-stage">
-                    <h1>Caux Seine Agglo</h1>
-                    <p>Réaliser un stage dans une communauté de communes m'a permis de découvrir de nombreuses choses et de visiter différents lieux. Il y avait de nombreuses missions variées à effectuer. J'ai pu installer des postes de travail, réaliser du dépannage réseau et effectuer des installations téléphoniques.</p>
-                    <a href="rapportdestage/rapportdestageCSA.pdf" target="_blank"><button>Télécharger le rapport</button></a>
-                </div>
-                <div class="box-stage">
-                    <h1>Nicolas et Fils</h1>
-                    <p>Être dans une petite entreprise familiale pour un stage m'a permis d'élargir mon expérience en milieu professionnel. Durant ce stage, j'ai acquis des bases solides dans la conception et le montage d'ordinateurs, mais aussi dans le dépannage de produits défectueux, l'étiquetage, la livraison, et bien plus encore.</p>
-                    <a href="rapportdestage/rapportdestageNEF.pdf" target="_blank"><button>Télécharger le rapport</button></a>
-                </div>
-            </div>
-        </section>
-        <section id="certifications" class="section-certif">
-            <h2>Mes certifications</h2>
-            <div class="contain-certif">
-                <div class="box-stage">
-                    <h1>MOOC CNIL</h1>
-                    <a href="certifications/MODULE-1(MoocCNIL).pdf" target="_blank"><button>Télécharger Module 1</button></a>
-                    <a href="certifications/MODULE-2(MoocCNIL).pdf" target="_blank"><button>Télécharger Module 2</button></a>
-                    <a href="certifications/MODULE-3(MoocCNIL).pdf" target="_blank"><button>Télécharger Module 3</button></a>
-                    <a href="certifications/MODULE-4(MoocCNIL).pdf" target="_blank"><button>Télécharger Module 4</button></a>
-                    <a href="certifications/MODULE-5(MoocCNIL).pdf" target="_blank"><button>Télécharger Module 5</button></a>
-                </div>
-                <div class="box-stage">
-                    <h1>MOOC ANSSI</h1>
-                    <a href="certifications/CertifMoocAnssi.pdf" target="_blank"><button>Télécharger Certification</button></a>
-                </div>
-                <div class="box-stage">
-                    <h1>PIX</h1>
-                    <a href="certifications/pix.pdf" target="_blank"><button>Télécharger Certification</button></a>
-                </div>
-                <div class="box-stage">
-                    <h1>OpenClassRooms</h1>
-                    <button>JavaScript</button>
-                    <button>PHP et MySQL</button>
-                    <button>environnement front-end</button>
-                    <button>HTML5 et CSS3</button>
-                    <h5>Certifications ne téléchargeable car je ne possède pas openclassrooms premium</h3>
-                </div>
-            </div>
-        </section>
-        <section id="projets" class="section">
-            <h2>Mes projets</h2>
-            <div class="grid">
-                <div class="project">
-                    <h3>Projet 1</h3>
-                    <p>Site marchand de manga avec login et panier</p>
-                    <a href="https://github.com/kaldeo/site-marchand" target="_blank"><button class="details" >Lien Github</button></a>
-                </div>
-                <div class="project">
-                    <h3>Projet 2</h3>
-                    <p>Site de streaming avec systhème d'abonnement.</p>
-                    <a href="https://github.com/kaldeo/site-streaming" target="_blank"><button class="details" >Lien Github</button></a>
-                </div>
-                <div class="project">
-                    <h3>Projet 3</h3>
-                    <p>Page de veille carte graphique.</p>
-                    <a href="veille_graphic_card/frontend/index.html" target="_blank"><button class="details" >Voir détails</button></a>
-                </div>
-                <div class="project">
-                    <h3>Projet 3</h3>
-                    <p>Gestion de dashboards Renault.</p>
-                    <a href="" target="_blank"><button class="details" >Voir détails</button></a>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <form action="https://formspree.io/f/xanybnpy" method="POST">
-                <input type="text" name="nom" placeholder="Votre nom" required>
-                <input type="email" name="email" placeholder="Votre email" required>
-                <textarea name="message" placeholder="Votre message" required></textarea>
-                <button type="submit">Envoyer</button>
-            </form>
-        </section>
-    </main>
+    
 
-    <footer>
-        <p>© 2024 Mon Portfolio. Tous droits réservés.</p>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/gabin.frvl/" target="_blank" aria-label="Instagram">
-                <i class='bx bxl-instagram-alt bx-lg' alt="Instagrame"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/gabin-freval-64b196293/" target="_blank" aria-label="LinkedIn">
-                <i class='bx bxl-linkedin bx-lg' ></i>
-            </a>
-            <a href="https://github.com/kaldeo" target="_blank" aria-label="GitHub">
-                <i class='bx bxl-github bx-lg' ></i>
+        <div id="projets" class="content-section">
+            
+            <div class="content">
+
+
+
+                <div class="first-box-droit">
+                    <div class="contain-info">
+                        <h1>Tous les projets</h1>
+                        <div class="horizontal-line"></div>
+
+                        <div class="contain-P">
+                            <p class="name">Gabin</p>
+                            <p class="lieu">Tous les projets</p>
+                        </div>
+
+                        <div class="contain-text">
+                            <p>Tous mes <span class="red-text">projets</span> sont dans la liste se trouvant à gauche, en passant le curseur dessus, vous pourrez voir les <span class="red-text">informations de chaque projet</span>.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="second-box-gauche">
+
+                    <section class="box-proj" 
+                        data-title="Site Marchand" 
+                        data-name="Gabin" 
+                        data-lieu="St Jo Sup" 
+                        data-description="J'ai réalisé ce [red]site marchand[/red] dans le cadre de mon BTS. Nous devions réaliser un site e-commerce sur le thème désiré, dans mon cas la vente de mangas. <br><br> 
+                        Dans le code, nous allons retrouver différents langages comme du [red]HTML, CSS, JS, PHP et SQL[/red]. Toutes les données concernant les livres sont stockées dans une base de données. <br><br>
+                        Pour plus d'informations, vous pouvez retrouver le site qui est téléchargeable sur mon [red]Github[/red] avec toutes les instructions nécessaires.">
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                        <div class="in-gauche">
+                            <img src="img/logo-zelda.png" alt="">
+                        </div>
+                        <div class="in-droit">
+                            <h1>Site Marchand</h1>
+                            <p>St Jo Sup</p>
+                        </div>
+                    </section>
+                
+                    <section class="box-proj" 
+                        data-title="Site Streaming" 
+                        data-name="Gabin" 
+                        data-lieu="Projet Personnel" 
+                        data-description="J'ai réalisé ce petit [red]site de streaming[/red] uniquement à but personnel, je l'ai fait dans le but de m'améliorer en code et je trouvais le sujet intéressant. <br><br>
+                        Le site est très complet, il dispose d'un système de [red]compte avec abonnement avec différentes offres et possibilité de résiliation bien sûr.[/red] <br><br>
+                        Pour le code, on peut retrouver du HTML, CSS, JS, PHP et SQL avec une base de données.<br><br>
+                        Pour plus d'informations, vous pouvez retrouver le site qui est téléchargeable sur mon [red]Github[/red] avec toutes les instructions nécessaires.">
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                        <div class="in-gauche">
+                            <img src="img/logo-zelda.png" alt="">
+                        </div>
+                        <div class="in-droit">
+                            <h1>Site Streaming</h1>
+                            <p>Projet Personnel</p>
+                        </div>
+                    </section>
+
+
+                    <section class="box-proj" 
+                        data-title="Page de veille technologique" 
+                        data-name="Gabin" 
+                        data-lieu="St Jo Sup" 
+                        data-description="Cette [red]page de veille[/red] a été réalisée dans le cadre de mon [red]BTS[/red] pour passer mon diplôme, le sujet porte sur les [red]cartes graphiques[/red] et leurs fonctionnalités. <br><br>
+                        La page est accessible directement via mon portolio ici même dans l'[red]onglet au dessus.[/red] <br><br>
+                        Pour plus d'informations, vous pouvez retrouver le site qui est téléchargeable sur mon [red]Github[/red] avec toutes les instructions nécessaires.">
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                        <div class="in-gauche">
+                            <img src="img/logo-zelda.png" alt="">
+                        </div>
+                        <div class="in-droit">
+                            <h1>Page de veille technologique</h1>
+                            <p>St Jo Sup</p>
+                        </div>
+                    </section>
+
+                    <section class="box-proj" 
+                    data-title="Gestion de dashboards" 
+                    data-name="Gabin, Justine" 
+                    data-lieu="Renault Sandouville" 
+                    data-description="C'est une [red]interface WEB[/red] qui a été réalisée pendant ma première année de BTS. J'ai intégré l'entreprise en tant que [red]stagiaire[/red] pour réaliser cette interface. <br><br>
+                    L'objectif de cette page était de pouvoir [red]naviguer entre différents dashboard[/red] en fonction de paramètres comme des filtres et des boutons. <br><br>
+                    Différents langages ont été utilisé comme du [red]PUG, CSS, JS, JSON, SQL[/red] et d'autres encore. <br><br>
+                    Ce projet n'est pas téléchargeable pour des raisons de confidentialité.">
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                    <div class="in-gauche">
+                        <img src="img/logo-zelda.png" alt="">
+                    </div>
+                    <div class="in-droit">
+                        <h1>Gestion de dashboards</h1>
+                        <p>Renault Sandouville</p>
+                    </div>
+                </section>
+
+                <section class="box-proj" 
+                    data-title="Portfolio" 
+                    data-name="Gabin" 
+                    data-lieu="St Jo Sup" 
+                    data-description="J'ai réalisé ce [red]portfolio[/red] également dans le cadre de mon BTS mais pas que. Il m'est également utile pour la suite de mes études et dans le monde professionnel. <br><br>
+                    Ce portfolio me représente, il montre qui je suis et ce que j'aime. Étant un fan de la licence [red]Zelda[/red], j'ai réalisé ce portfolio sur ce thème que j'affectionne. <br><br>
+                    Il est hébergé sur [red]Github[/red] ce qui me permet de l'héberger gratuitement. ">
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                    <div class="in-gauche">
+                        <img src="img/logo-zelda.png" alt="">
+                    </div>
+                    <div class="in-droit">
+                        <h1>Portfolio</h1>
+                        <p>St Jo Sup</p>
+                    </div>
+                </section>
+
+                <section class="box-proj" 
+                    data-title="Cabinet Caux Vallée de Seine" 
+                    data-name="Gabin" 
+                    data-lieu="Bolbec" 
+                    data-description="Pour ce projet, j'ai réalisé un site internet pour une [red]agence immobilière[/red]. <br><br>
+                    À première vue, c'est un simple site vitrine, mais en réalité, il y a toute la [red]gestion de message et de demandes d'estimation stocké en base de données[/red]. <br><br>
+                    Ce site fonctionne à l'aide d'une [red]API ainsi que différentes routes[/red]. Les langages utilisés sont : [red]HTML, CSS, JS, JSON, SQL[/red]. <br><br>
+                    Contenu non-téléchargeable.">
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                    <div class="in-gauche">
+                        <img src="img/logo-zelda.png" alt="">
+                    </div>
+                    <div class="in-droit">
+                        <h1>Cabinet Caux Vallée de Seine</h1>
+                        <p>Bolbec</p>
+                    </div>
+                </section>
+                </div>
+                
+                
+
+            </div>
+        </div>
+        
+
+
+
+
+
+        
+        <div id="veille" class="content-section">
+            <a href="veille_graphic_card/frontend/index.html" class="btn-rapport" id="btn-veille">
+                <p>Voir la page de Veille</p>
             </a>
         </div>
+
+
+
+
+
+        <div id="Apropos" class="content-section">
+            
+
+            <div class="contain-all">
+                <h1>A propos</h1>
+                <div class="arrow-bar" id="arrow-1"></div>
+                <p>Passionné par le web, j'ai commencé mes études en informatique en réalisant un Bac professionnel Système Numérique Option RISC au lycée Jules Siegfried au Havre. J'ai choisi cette formation, car je l'ai trouvé professionnalisante, durant chaque année, je devais réaliser un stage en entreprise.</p>
+                <br>
+                <p>Après l'obtention de ce diplôme, j'ai commencé un BTS SIO Option SLAM (Solutions Logicielles et Applications Métiers) au lycée St Jo Sup le Havre, je suis actuellement en deuxième année et je passe l'examen sous peu.</p>
+                <br>
+                <p>J'ai approfondi mes compétences à travers divers projets académiques et professionnels.</p>
+                <h1>Mes compétences</h1>
+                <div class="arrow-bar" id="arrow-1"></div>
+
+                <div class="contain-competences">
+                    <div class="compétences"><i class='bx bxl-postgresql bx-lg' style='color:#ffffff'  ></i></div>
+                    <div class="compétences"><i class='bx bxl-php bx-lg' style='color:#ffffff' ></i></div>
+                    <div class="compétences"><i class='bx bxl-html5 bx-lg' style='color:#ffffff' ></i></div>
+                    <div class="compétences"><i class='bx bxl-css3 bx-lg' style='color:#ffffff'></i></div>
+                    <div class="compétences"><i class='bx bxl-python bx-lg' style='color:#ffffff'></i></div>
+                    <div class="compétences"><i class='bx bxl-mongodb bx-lg' style='color:#ffffff'></i></div>
+                    <div class="compétences"><i class='bx bxl-visual-studio bx-lg' style='color:#ffffff' ></i></div>
+                    <div class="compétences"><i class='bx bxl-gitlab bx-lg' style='color:#ffffff' ></i></div>
+                    <div class="compétences"><i class='bx bxl-github bx-lg' style='color:#ffffff' ></i></div>
+                    <div class="compétences"><i class='bx bxl-javascript bx-lg' style='color:#ffffff' ></i></div>
+                    <div class="compétences"><i class='bx bxl-git bx-lg' style='color:#ffffff' ></i></div>
+                    <div class="compétences"><i class='bx bxl-nodejs bx-lg' style='color:#ffffff' ></i></div>
+
+
+
+                </div>
+
+                <h1>Mes certifications</h1>
+                <div class="arrow-bar" id="arrow-1"></div>
+
+                <div class="contain-competences">
+                    <a href="pdf/certifs/certifs MOOC CNIL Gabin.zip" class="certif">MOOC CNIL</a>
+                    <a href="pdf/certifs/CertifMoocAnssi.pdf" class="certif" target="_blank">MOOC ANSSI</a>
+                    <a href="pdf/certifs/pix.pdf" class="certif" target="_blank">PIX</a>
+                    <a href="#" class="certif" target="_blank">Openclassrooms</a>
+
+
+                </div>
+                
+
+
+            </div>
+
+
+            <img src="img/cv.png" alt="">
+        </div>
+
+
+
+
+
+
+
+    </main>
+    
+    <footer>
+        <img src="img/bas-gauche.jpg" alt="" class="font">
+        <div class="contain-link">
+            <a href="https://github.com/kaldeo" target="_blank">
+                <i class='bx bxl-github bx-lg'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/gabin-freval-64b196293/" target="_blank">
+                <i class='bx bxl-linkedin-square bx-lg' ></i>
+            </a>
+            <a href="mailto:gabin.freval@gmail.com" target="_blank">
+                <i class='bx bxl-gmail bx-lg'></i>
+            </a>
+        </div>
+        <img src="img/bas-droit.jpg" alt="" class="font" id="font2">
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
