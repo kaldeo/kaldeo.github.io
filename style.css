@@ -111,19 +111,79 @@ ul img{
 }
 #accueil h1{
     font-family: 'Hylia';
-    font-size: 80px;
+    font-size: 70px;
     color: #000000;
     font-weight: 100;
+    margin-left: 40px;
+    margin-bottom: 5px;
 }
 #accueil p{
     font-family: 'Calamity-Bold';
     font-size: 20px;
     margin-left: 60px;
     width: 50%;
-    color: #000000;
+    /* color: #000000; */
     margin-top: 50px;
 }
 
+.contain-first-title{
+    width: 60%;
+    height: 130px;
+    background-color: #92917c;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    align-items: center;
+}
+.contain-name{
+    width: 30%;
+    height: 100px;
+    background-color: #92917c;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.bull-texte{
+    width: 40%;
+    height: 150px;
+    border-radius: 100px;
+
+    background: rgba(0, 0, 0, 0.53);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    
+}
+#accueil .bull-texte p{
+    color: white;
+    margin: 0;
+    position: fixed;
+    top: -15px;
+    left: 80px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+#accueil .bull-texte img{
+    width: 5%;
+    position: fixed;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#accueil .bull-texte h3{
+    margin: 40px;
+    /* margin-top: 35px; */
+    color: white;
+}
 
 /* STAGE */
 
@@ -178,11 +238,11 @@ ul img{
     font-size: 28px;
 }
 .btn-rapport{
-    width: 35%;
+    width: 30%;
     height: 40px;
     position: absolute;
     bottom: 10px;
-    right: 10px;
+    right: 18px;
     background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.3px);
@@ -199,6 +259,9 @@ ul img{
     box-sizing: border-box;
     outline: 2px solid transparent;
 
+}
+#btn-rapport2{
+left: 300px;
 }
 .btn-rapport p{
     margin: 0;
