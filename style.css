@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Code';
-  src: url('../font/Code\ 7x5.ttf') format('truetype');
+  src: url('Code\ 7x5.ttf') format('truetype');
 }
 *{
     padding: 0;
