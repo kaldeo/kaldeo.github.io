@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/style.css">
     <title>Portfolio de Gabin</title>
+    <!-- Debug CSS loaded -->
+    <style>
+        /* Failsafe: si le CSS externe ne charge pas */
+        .tab-content:not(#portfolio) { display: none !important; }
+        #portfolio { display: block !important; }
+    </style>
 </head>
 <body>
 
@@ -109,5 +115,33 @@
         </div>
     </div>
     <script src="src/js/script.js"></script>
+    
+    <!-- Script de debug pour GitHub Pages -->
+    <script>
+        console.log('🔍 Debug GitHub Pages:');
+        console.log('- URL actuelle:', window.location.href);
+        console.log('- CSS chargé:', document.styleSheets.length > 0 ? '✅' : '❌');
+        
+        // Vérification immédiate des éléments
+        setTimeout(() => {
+            const buttons = document.querySelectorAll('.tab-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            console.log('- Boutons trouvés:', buttons.length);
+            console.log('- Contenus trouvés:', contents.length);
+            
+            // Force l'affichage du premier onglet si problème
+            if (contents.length > 0) {
+                contents.forEach((content, index) => {
+                    if (index === 0) {
+                        content.style.display = 'block';
+                        content.classList.add('active');
+                    } else {
+                        content.style.display = 'none';
+                        content.classList.remove('active');
+                    }
+                });
+            }
+        }, 500);
+    </script>
 </body>
 </html>
