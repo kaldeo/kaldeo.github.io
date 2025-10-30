@@ -8,21 +8,105 @@
 </head>
 <body>
 
-    <video autoplay muted loop id="bg-video">
+    <video autoplay muted loop id="bg-video" disablepictureinpicture>
     <source src="src/video/Design sans titre.mp4" type="video/mp4">
     </video>
 
 
     <h1>Bienvenue sur mon portfolio</h1>
+    
+    <!-- Conteneur des boutons -->
     <div class="contain-btn">
-        <button>Mon protfolio</button>
-        <button>Mon expérience</button>
-        <button>Mes projets</button>
-        <button>Mon profil</button>
-        <button>Fermer la page</button>
+        <button class="tab-btn active" data-tab="portfolio">Mon portfolio</button>
+        <button class="tab-btn" data-tab="experience">Mon expérience</button>
+        <button class="tab-btn" data-tab="projets">Mes projets</button>
+        <button class="tab-btn" data-tab="profil">Mon profil</button>
+        <button class="tab-btn" data-tab="fermer">Fermer la page</button>
+    </div>
 
+    <!-- Conteneur du contenu -->
+    <div class="content-container">
+        <div class="tab-content active" id="portfolio">
+            <h2>Mon Portfolio</h2>
+            <p>Bienvenue dans mon portfolio ! Ici vous découvrirez mes créations et mes compétences.</p>
+            <ul>
+                <li>Développement web frontend</li>
+                <li>Design d'interfaces utilisateur</li>
+                <li>Projets créatifs</li>
+            </ul>
+            <br>
+            <p>À propos de mon portfolio :</p>
+            <p>Comme vous pouvez le constater, mon portfolio porte sur un thème un peu particulier. Je me suis inspiré d'un thème que j'apprécie, mais j'ai surtout utilisé la même direction artistique d'un jeu vidéo très connu que j'affectionne particulièrement.</p>
+        </div>
 
+        <div class="tab-content" id="experience">
+            <h2>Mon Expérience</h2>
+            <p>Voici un aperçu de mon parcours professionnel :</p>
+            <div class="experience-item">
+                <h3>Alternance Usine Renault Sandouville - 15/09/2025 - 17/10/2026</h3>
+                <p>Création d'applications temps réel avec WebSocket. Détection avec caméra Basler sur un modèle d'IA entraîné.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Stage Usine Renault Sandouville - 06/01/2025 - 14/02/2025</h3>
+                <p>Développement d'applications diverses backend et frontend.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Stage Usine Renault Sandouville - 13/05/2024 - 14/06/2024</h3>
+                <p>Développement d'applications diverses backend et frontend.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Service Informatique de Caux Seine Agglo - Décembre 2022 - Janvier 2023</h3>
+                <p>Support Informatique et téléphonique (réponse de tickets) - Installation systèmes d’exploitation - Installation de postes de travail (mairies, écoles, piscines, déchetteries).</p>
+            </div>
+        </div>
 
+        <div class="tab-content" id="projets">
+            <h2>Mes Projets</h2>
+            <p>Découvrez mes réalisations :</p>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>Site Portfolio</h3>
+                    <p>Ce site que vous visitez actuellement !</p>
+                </div>
+                <div class="project-item">
+                    <h3>Template-api-rest-express-nodeJS</h3>
+                    <p>Comme son nom l'indique c'est un template pour créer une API REST avec Express et Node.js.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Sujet de Veille - Carte graphique</h3>
+                    <p>Pour valider mon BTS, il me fallait une page web sur un sujet de veille, dans mon cas, les cartes graphiques.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Site de streaming</h3>
+                    <p>Projet à réalisation personnelle, je l'ai fait pour m'améliorer.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Site marchand</h3>
+                    <p>Projet réalisé au cours de mon BTS.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="profil">
+            <h2>Mon Profil</h2>
+            <p>À propos de moi :</p>
+            <div class="profile-info">
+                <p><strong>Nom :</strong> FREVAL</p>
+                <p><strong>Prénom :</strong> Gabin</p>
+                <p><strong>Age :</strong> 20 ans</p>
+
+                <p><strong>Spécialité :</strong> Développement Web - (front et back)</p>
+                <p><strong>Passions :</strong> Code, Design, Technologie, Sport, Cinéma</p>
+                <p><strong>Objectif :</strong> Continuer de m'améliorer et d'apprendre de nouvelles compétences.</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="fermer">
+            <h2>Fermer la page</h2>
+            <p>Merci de votre visite !</p>
+            <p>Êtes-vous sûr de vouloir quitter ?</p>
+            <button class="close-btn" onclick="window.close()">Confirmer la fermeture</button>
+        </div>
     </div>
     <script src="src/js/script.js"></script>
 </body>

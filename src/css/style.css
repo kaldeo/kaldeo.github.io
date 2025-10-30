@@ -2,34 +2,149 @@
   font-family: 'Code';
   src: url('../font/Code\ 7x5.ttf') format('truetype');
 }
-
 *{
     padding: 0;
     margin: 0;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  font-family: code;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+}
+/* ################# VIDEO BACKGROUND ################# */
 #bg-video {
   position: fixed;       /* reste fixe même si on scroll */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* couvre tout l’écran sans déformation */
+  object-fit: cover;     /* couvre tout l'écran sans déformation */
   z-index: -1;           /* passe derrière le contenu */
 }
 
-/* 🔹 Contenu par-dessus la vidéo */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: code;
-  color: white;
-  background: black;     /* au cas où la vidéo ne charge pas */
-  overflow-x: hidden;
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+#bg-video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/* ################# CONTAIN CONTENER ################# */
+.content-container {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 40%;
+    height: 70%;
+    background-color: rgba(13, 14, 16, 0.9);
+    border: 1px solid #0304DA;
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+    backdrop-filter: blur(5px);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    color: #00FF41;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-bottom: 2px solid #0304DA;
+    padding-bottom: 10px;
+}
+
+.tab-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #CCCCCC;
+}
+
+.tab-content ul {
+    margin-left: 20px;
+    color: #CCCCCC;
+}
+
+.tab-content li {
+    margin-bottom: 8px;
+}
+
+/* Styles pour l'expérience */
+.experience-item {
+    background-color: rgba(3, 4, 218, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 3px solid #0304DA;
+    border-radius: 5px;
+}
+
+.experience-item h3 {
+    color: #00FF41;
+    margin-bottom: 10px;
+}
+
+/* Styles pour les projets */
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-item {
+    background-color: rgba(0, 255, 65, 0.1);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #00FF41;
+}
+
+.project-item h3 {
+    color: #00FF41;
+    margin-bottom: 8px;
+}
+
+/* Styles pour le profil */
+.profile-info {
+    background-color: rgba(13, 14, 16, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #0304DA;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.profile-info strong {
+    color: #00FF41;
+}
+
+/* Animation fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
+/* ################################################################################################### */
 
+/* ################# BUTTONS ################# */
 .contain-btn{
     height: 50%;
     width: 30%;
@@ -46,7 +161,7 @@ body {
     gap: 8%;
 }
 
-button{
+.tab-btn{
     font-family: code;
     font-size: 20px;
     padding: 2%;
@@ -57,7 +172,37 @@ button{
 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
-button:hover{
+
+.tab-btn:hover{
     background-color: #0304DA;
     cursor: pointer;
+    transform: translateX(5px);
+}
+
+.tab-btn.active{
+    background-color: #0304DA;
+    transform: translateX(10px);
+    box-shadow: 0 0 15px rgba(3, 4, 218, 0.5);
+}
+
+.tab-btn.active:hover{
+    background-color: #0506FF;
+}
+
+/* Bouton de fermeture spécial */
+.close-btn{
+    font-family: code;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.close-btn:hover{
+    background-color: #CC0000;
 }
