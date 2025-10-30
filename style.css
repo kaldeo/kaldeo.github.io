@@ -57,16 +57,6 @@ body {
     display: block;
 }
 
-/* Fallback: afficher le premier onglet par défaut même sans JS */
-.tab-content:first-of-type {
-    display: block;
-}
-
-/* Si JS fonctionne, cette règle sera overridée par .tab-content */
-.tab-content:not(.active):not(:first-of-type) {
-    display: none;
-}
-
 .tab-content h2 {
     color: #00FF41;
     margin-bottom: 20px;
